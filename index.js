@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const route = require('./routes/dialogFlow')
 
 const app = express();
+require('dotenv').config();
 
 app.use(bodyParser.json())
 
