@@ -3,12 +3,8 @@ const structjson = require('./structjson.js');
 
 require('dotenv').config();
 
-const credentials = {
-  client_email: process.env.client_email,
-  private_key: process.env.private_key
-}
 
-const sessionClient = new dialogFlow.SessionsClient({projectID: process.env.googleProjectId, credentials});
+const sessionClient = new dialogFlow.SessionsClient();
 
 const sessionPath = sessionClient.sessionPath(
   process.env.googleProjectId,
